@@ -3,6 +3,8 @@
 1、疫情地图，数据来源[CBNData](https://z.cbndata.com/2019-nCoV/index.html)
 ![image.png](https://i.loli.net/2020/02/11/SesZNrU1PfiJD5t.png)
 
+![image.png](https://i.loli.net/2020/02/11/iY4X5GQOCnRovpu.png)
+
 文案：
 ```
 湖北省鄂州市鄂城区汀祖镇 距离您定位位置 52.57 公里，曾出现 3 例新型冠状病毒肺炎确诊病例。确诊病例已收入定点医院救治，只要做好自身防护，无需过分担心哦
