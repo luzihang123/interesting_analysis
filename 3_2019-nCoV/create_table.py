@@ -3,7 +3,7 @@
 # @Time: 2020-02-11 18:38
 # @File: create_table.py
 # @project demand:
-from sqlalchemy import create_engine, Integer, String, Float, DateTime
+from sqlalchemy import create_engine, Integer, String, Float, DateTime, DECIMAL
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column
@@ -44,9 +44,9 @@ class CBNdataTables(Base):
     # 地址
     address = Column(String(length=100), nullable=True, comment="地址")
     # 经度
-    longitude = Column(Float, nullable=True, comment="经度")
+    longitude = Column(DECIMAL(20, 10), nullable=True, comment="经度")
     # 纬度
-    latitude = Column(Float, nullable=True, comment="纬度")
+    latitude = Column(DECIMAL(20, 10), nullable=True, comment="纬度")
     # 确诊数量
     count = Column(String(length=10), nullable=True, comment="确诊数量")
     # 去重hash值:
