@@ -12,4 +12,4 @@ CREATE TABLE `CBN_data` (
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `hash_value` (`hash_value`)
-) ENGINE=InnoDB AUTO_INCREMENT=5968 DEFAULT CHARSET=utf8mb4 COMMENT='CBNdata疫情地图数据';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='CBNdata疫情地图数据';
