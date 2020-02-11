@@ -7,9 +7,10 @@ import logging
 import requests
 import time
 from pprint import pprint
+from insert_data import cbn_mysql
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
-logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, datefmt='%Y/%m/%d %H:%M:%S',
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 headers = {
     'Accept': 'application/json, text/plain, */*',
@@ -27,6 +28,8 @@ while True:
         i += 1
         print(len(response.json()['data']))
         pprint(response.json()['data'][0])
+        for item in response.json()['data']:
+            cbn_mysql.insert_item(dict(item))
         time.sleep(0.5)
         continue
     break
