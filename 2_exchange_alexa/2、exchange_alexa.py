@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 # @Author: clark
 # @Time: 2019-11-01 19:09
-# @File: 2、exchange_alexa.py
+# @File: 2_exchange_alexa.py
 # @project demand:交易所网站历史Alexa流量数据
 # api 文档 https://docs.aws.amazon.com/AlexaWebInfoService/latest/ApiReference_TrafficHistoryAction.html
 import csv
