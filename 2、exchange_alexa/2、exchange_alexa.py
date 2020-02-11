@@ -105,12 +105,14 @@ class ExchangeAlexa(object):
 
 if __name__ == '__main__':
     alexa = ExchangeAlexa()
-    exchange_list = [{"top_domain": "binance.com", "exchange_name": "币安"},
-                     {"top_domain": "coinbase.com", "exchange_name": "CoinBase"},
-                     {"top_domain": "hbg.com", "exchange_name": "火币"},
-                     {"top_domain": "okex.com", "exchange_name": "Okex"},
-                     {"top_domain": "mxc.com", "exchange_name": "抹茶"},
-                     ]
+    exchange_list = [
+        {"top_domain": "binance.com", "exchange_name": "币安"},
+        {"top_domain": "coinbase.com", "exchange_name": "CoinBase"},
+        {"top_domain": "hbg.com", "exchange_name": "火币"},
+        {"top_domain": "okex.com", "exchange_name": "Okex"},
+        {"top_domain": "bitmex.com", "exchange_name": "bitmex"},
+        {"top_domain": "mxc.com", "exchange_name": "抹茶"},
+    ]
     for exchange in exchange_list:
         data_soup = alexa.traffic_history(top_domain=exchange['top_domain'], my_range=31, start_time=20191001)
         for item in alexa.parse_data(data_soup=data_soup,
