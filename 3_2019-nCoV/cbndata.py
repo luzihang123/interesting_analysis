@@ -4,10 +4,13 @@
 # @File: cbndata.py
 # @project demand:
 import logging
+from json import JSONDecodeError
+
 import requests
 import time
 from pprint import pprint
 from insert_data import cbn_mysql
+import json
 
 logging.basicConfig(level=logging.INFO, datefmt='%Y/%m/%d %H:%M:%S',
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -24,12 +27,20 @@ params = (
 i = 0
 while True:
     response = requests.get(f'https://assets.cbndata.org/2019-nCoV/{i}/data.json', headers=headers, params=params)
-    if response.json().get("data"):
-        i += 1
-        print(len(response.json()['data']))
-        pprint(response.json()['data'][0])
-        for item in response.json()['data']:
-            cbn_mysql.insert_item(dict(item))
-        time.sleep(0.5)
-        continue
-    break
+    try:
+        json_data = json.loads(response.text)
+        if json_data.get("data"):
+            i += 1
+            print(len(response.json()['data']))
+            pprint(response.json()['data'][0])
+            for item in response.json()['data']:
+                cbn_mysql.insert_item(dict(item))
+            time.sleep(0.5)
+            continue
+        break
+    except JSONDecodeError as e:
+        logging.info(f"JSONDecodeError:{e},返回非json数据:{response.text}")
+        break
+    except Exception as e:
+        logging.error(f"异常:{e}")
+        break

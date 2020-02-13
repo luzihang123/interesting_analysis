@@ -48,7 +48,7 @@ class CBNdataTables(Base):
     # 纬度
     latitude = Column(DECIMAL(20, 10), nullable=True, comment="纬度")
     # 确诊数量
-    count = Column(String(length=10), nullable=True, comment="确诊数量")
+    count = Column(String(length=10), nullable=True, comment="确诊数量 -1为尚未公布确诊人数")
     # 去重hash值:
     hash_value = Column(String(length=50), nullable=False, unique=True, comment="去重hash值")
     # 创建时间
