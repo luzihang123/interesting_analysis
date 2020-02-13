@@ -1,5 +1,16 @@
-# 2019新型冠状病毒疫情
+# 发现身边最近疫情监控
+## 功能
+- 输入自己的住址
+- 发现与最近疫情的距离，如果小于某一阈值，通知给自己
+- 通知方式：邮件、短信
 
+## TODO
+- 通过腾讯坐标转换
+- 通过twilio发送短信
+- 通过celery实现任务异步
+
+
+## 参考资料
 1、疫情地图，数据来源[CBNData](https://z.cbndata.com/2019-nCoV/index.html)
 ![image.png](https://i.loli.net/2020/02/11/SesZNrU1PfiJD5t.png)
 
