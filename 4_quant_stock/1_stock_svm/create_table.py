@@ -45,7 +45,7 @@ class KlineDayTables(Base):
     # 涨跌额
     amt_change = Column(DECIMAL(20, 2), default=None, comment="涨跌额")
     # 涨跌幅
-    pet_change = Column(DECIMAL(20, 2), default=None, comment="涨跌幅")
+    pct_change = Column(DECIMAL(20, 2), default=None, comment="涨跌幅")
 
     # 创建时间
     create_time = Column(DateTime, default=datetime.datetime.now, comment="创建时间")
