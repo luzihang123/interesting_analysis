@@ -1,2 +1,5 @@
-# 数据可视化视频
-<iframe src="//player.bilibili.com/player.html?aid=42243532&cid=74150837&page=1" width="600" height="400" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+# 数字货币交易所流量排名 可视化视频
+# 哔哩哔哩
+https://www.bilibili.com/video/av42243532
+# YouTube
+https://youtu.be/eoRiXJawRhU
