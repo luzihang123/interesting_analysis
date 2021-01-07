@@ -12,7 +12,7 @@ hyperlink==19.0.0
 idna==2.8
 incremental==17.5.0
 joblib==0.14.1
-lxml==4.4.1
+lxml==4.6.2
 myawis==0.2.4
 numpy==1.18.1
 pandas==1.0.1
